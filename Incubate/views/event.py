@@ -86,16 +86,16 @@ def questions():
         db.execute("SELECT email FROM users WHERE id = '{}'".format(session["user_id"]))
         email = db.fetchone()
 
-        subject = event
-        message = \
-        """
-            Confirmation: You have been registered for the {0} event.
-        """.format(event)
-        with mail.connect() as conn:
-            msg = Message(recipients=email,
-                          body=message,
-                          subject=subject)
-            conn.send(msg)
+        # subject = event
+        # message = \
+        # """
+        #     Confirmation: You have been registered for the {0} event.
+        # """.format(event)
+        # with mail.connect() as conn:
+        #     msg = Message(recipients=email,
+        #                   body=message,
+        #                   subject=subject)
+        #     conn.send(msg)
         return redirect(url_for('index', event = event))
 
     else:
