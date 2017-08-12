@@ -7,11 +7,6 @@ from flask_mail import Mail
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST']        = 'localhost'
-app.config['MYSQL_USER']        = 'root'
-app.config['MYSQL_PASSWORD']    = '456123'
-app.config['MYSQL_DB']          = 'incubate'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
 @app.cli.command('initdb')
