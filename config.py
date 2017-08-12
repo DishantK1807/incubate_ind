@@ -10,6 +10,7 @@ class BaseConfig(object):
     MYSQL_DATABASE_PASSWORD = os.environ.get("MYSQL_PASSWORD")
     MYSQL_DATABASE_USER = os.environ.get("MYSQL_USER")
     MYSQL_DATABASE_HOST = os.environ.get("MYSQL_HOST")
+
     MYSQL_DATABASE_CURSORCLASS = os.environ.get("MYSQL_CURSORCLASS")
 
 class Development(BaseConfig):
