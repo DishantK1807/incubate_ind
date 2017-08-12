@@ -9,9 +9,10 @@ import config
 
 app = Flask(__name__)
 
+app.config.from_object('config.Production')
 mysql = MySQL(app)
 FlaskCLI(app)
-app.config.from_object('config.Production')
+
 
 @app.cli.command()
 def initdb():
