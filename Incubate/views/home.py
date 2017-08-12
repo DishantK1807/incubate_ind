@@ -10,7 +10,7 @@ from flask_mail import Message
 from Incubate.helpers import *
 from Incubate import app
 from Incubate import mysql
-from Incubate import mail
+# from Incubate import mail
 
 from Incubate.views import login
 from Incubate.views import event
