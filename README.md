@@ -15,4 +15,9 @@
 
 
 #Production
-1)Run python _set
+1) Open terminal in the main directory and enter the following commands
+2) export FLASK_APP=Incubate
+3) pip install -e .
+4) flask initdb (To initialize the database the first time)
+5) flask run
+6) Go to the url given in the terminal to access the website
