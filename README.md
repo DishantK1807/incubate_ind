@@ -21,3 +21,20 @@
 4) flask initdb (To initialize the database the first time)
 5) flask run
 6) Go to the url given in the terminal to access the website
+
+chmod 755 /home/deploy/sites/incubate_ind/gunicorn.sh
+Move gunicorn.conf to /etc/init/
+systemctl enable gunicorn.sh
+
+/etc/lib/systemd/system/supervisord.service
+sudo systemctl daemon-reload
+sudo systemctl enable supervisord.service
+sudo systemctl start supervisord.service
+
+
+Steps for deployment(if server is down):
+START:
+sudo systemctl start supervisord.service
+
+DEBUG:
+sudo systemctl status supervisord.service

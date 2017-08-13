@@ -1,10 +1,10 @@
 #!/bin/bash
 
 NAME="Incubate"
-FLASKDIR=/home/ubuntu/Incubate
+FLASKDIR=/home/deploy/sites/incubate_ind/Incubate
 SOCKFILE=/home/ubuntu/Incubate/sock
-USER=root
-GROUP=root
+USER=deploy
+GROUP=sudo
 NUM_WORKERS=3
 
 echo "Starting $NAME"
@@ -14,7 +14,7 @@ RUNDIR=$(dirname $SOCKFILE)
 test -d $RUNDIR || mkdir -p $RUNDIR
 
 # Start your gunicorn
-exec gunicorn hello:app -b 0.0.0.0:8080 \
+exec gunicorn Incubate:app -b 0.0.0.0:8080 \
   --name $NAME \
   --workers $NUM_WORKERS \
   --user=$USER --group=$GROUP \

@@ -1,0 +1,11 @@
+[Unit]
+Description=Supervisord Service
+
+[Service]
+Restart=on-failure
+RestartSec=42s
+User=ubuntu
+ExecStart=/usr/bin/supervisord -c /etc/supervisor/conf.d/Incubate.conf
+
+[Install]
+WantedBy=multi-user.target
